@@ -30,12 +30,13 @@ class SearchWithMistake:
                 #     self.next_state = self.state_number + 1
                     
                 elif pattern[self.pos_in_dict] == self.dictionary[i]: #kontrola shody symbolu
-                    self.next_state = self.state_number + 1 #posun doprava
+                    self.next_state = self.state_number + 1
                     
-                elif pattern[self.pos_in_dict] != self.dictionary[i]: #kontrola neshody symbolu, nebo nadbytecny symbol
-                        self.next_state = self.state_number + len(pattern) + 2 #diagonalni posun
-                elif self.pos_in_dict !=
-                
+                elif self.state_number % (len(pattern) +1) == 0: #zde je to trosku tricky, je opet potreba zkontrolovat, zda jsme se posunuli a jestli se symboly shoduji
+                    self.next_state = self.state_number + 1
+                    print(self.dictionary[i])
+                    if pattern[self.pos_in_dict] != self.dictionary[i]:
+                        self.next_state = self.state_number + len(pattern) + 2
                 else:
                     self.next_state = self.state_number + 1 #shoda symbolu, pokud nevyjde ani jedna z podminek vyse
                     
