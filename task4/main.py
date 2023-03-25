@@ -6,7 +6,6 @@ import re
 
 class PreText:
     def __init__(self) -> None:
-        self.radovan_je_kar = []
         self.path = os.getcwd() + "\gutenberg"
 
 
