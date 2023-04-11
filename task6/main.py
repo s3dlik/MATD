@@ -215,7 +215,7 @@ if __name__ == '__main__':
     pretext = PreText()    
     # pretext.download()
     # pretext.handle_file()
-    pretext.invert_index()
+    #pretext.invert_index()
     
     tf_idf_weight = pretext.vector_model(['georg', 'almost'])
     #print(tf_idf_weight)
